@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavani Bandi | Data Analyst</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #f4f7fb;
+      line-height: 1.7;
+    }
+    nav {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #111c30;
+    }
+    nav a, a { color: #67e8f9; text-decoration: none; }
+    nav a { margin-left: 15px; }
+    header { padding: 85px 8%; }
+    .tag { color: #67e8f9; font-weight: bold; }
+    h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.15; }
+    h2 { color: #67e8f9; }
+    section { padding: 35px 8%; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #152238;
+      border: 1px solid #2b3d57;
+      padding: 22px;
+      border-radius: 14px;
+    }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skills span {
+      background: #152238;
+      border: 1px solid #2b3d57;
+      border-radius: 20px;
+      padding: 7px 15px;
+    }
+    .btn {
+      display: inline-block;
+      background: #67e8f9;
+      color: #0b1220;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 8px 8px 0 0;
+    }
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #111c30;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <strong>PAVANI BANDI</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <p class="tag">WELCOME TO MY PORTFOLIO</p>
+    <h1>Hi, I'm Pavani Bandi 👋</h1>
+    <h2>Aspiring Data Analyst</h2>
+    <p>
+      I am passionate about transforming raw data into meaningful
+      insights using data analysis, visualization, and problem-solving.
+    </p>
+    <a class="btn" href="#projects">Explore My Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a B.Tech graduate from Malla Reddy College,
+      building my skills in data analytics and data-driven
+      problem-solving. I enjoy exploring datasets, finding
+      patterns, and presenting insights through visualizations.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Excel</span>
+      <span>EDA</span>
+      <span>Data Visualization</span>
+      <span>Web Scraping</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>E-Commerce Sales Analytics</h3>
+        <p>
+          Power BI project focused on sales, customers,
+          products, and business performance analysis.
+        </p>
+        <p><strong>Tools:</strong> Power BI, Power Query, DAX</p>
+      </div>
+      <div class="card">
+        <h3>BikeWale Web Scraping & EDA</h3>
+        <p>
+          Collected and analyzed 500 bike records to explore
+          pricing, mileage, engine capacity, and performance.
+        </p>
+        <p><strong>Tools:</strong> Python, Pandas, EDA</p>
+      </div>
+      <div class="card">
+        <h3>StayPoint Hospitality</h3>
+        <p>
+          SQL analysis project exploring hotel reservation
+          data and answering business questions with queries.
+        </p>
+        <p><strong>Tools:</strong> SQL</p>
+      </div>
+    </div>
+    <p>
+      <em>Project descriptions are summaries. Add verified
+      project links and results before publishing them as completed work.</em>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>I'm interested in learning, collaborating, and exploring data analytics opportunities.</p>
+    <a class="btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <p>Email: Add your professional email here</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Pavani Bandi | Data Analytics Portfolio</p>
+  </footer>
+</body>
+</html>
