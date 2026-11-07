@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pavani Bandi - Aspiring Data Analyst. Explore my projects in Python, SQL, Power BI, Excel and Databricks.">
+  <meta name="description" content="Pavani Bandi - Aspiring Data Analyst Portfolio">
   <title>Pavani Bandi | Data Analyst Portfolio</title>
 
   <style>
@@ -12,216 +12,209 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b1220;
-      color: #f4f7fb;
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
       line-height: 1.7;
     }
 
     a {
+      color: inherit;
       text-decoration: none;
     }
 
-    nav {
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #111827;
+      border-bottom: 1px solid #263449;
       padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 15px;
-      background: #111c30;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #263b56;
     }
 
-    nav strong {
-      color: #67e8f9;
-      font-size: 21px;
-      letter-spacing: 1px;
+    .logo {
+      color: #22d3ee;
+      font-size: 22px;
+      font-weight: bold;
     }
 
-    nav div {
+    nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 20px;
     }
 
     nav a {
-      color: #e2e8f0;
+      color: #d1d5db;
       font-size: 14px;
     }
 
     nav a:hover {
-      color: #67e8f9;
+      color: #22d3ee;
     }
 
-    header {
+    section {
+      padding: 75px 8%;
+      scroll-margin-top: 75px;
+    }
+
+    .hero {
       min-height: 520px;
-      padding: 110px 8%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: linear-gradient(135deg, #0b1220, #172b46);
+      background: linear-gradient(135deg, #0b1120, #142b43);
     }
 
-    .tag {
-      color: #67e8f9;
-      font-size: 14px;
-      font-weight: bold;
+    .eyebrow {
+      color: #22d3ee;
       letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
     h1 {
-      font-size: clamp(38px, 6vw, 65px);
-      line-height: 1.2;
-      margin: 18px 0;
+      font-size: clamp(38px, 6vw, 58px);
+      margin: 15px 0;
+      color: #ffffff;
     }
 
-    header h2 {
-      color: #67e8f9;
-      font-size: 27px;
-      margin-bottom: 18px;
+    h2 {
+      color: #22d3ee;
+      font-size: 30px;
+      margin-bottom: 22px;
     }
 
-    header p {
-      max-width: 700px;
+    h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .hero h2 {
+      color: #22d3ee;
+      margin-bottom: 15px;
+    }
+
+    .hero p, .section-text {
+      max-width: 750px;
       color: #cbd5e1;
-      font-size: 17px;
     }
 
     .buttons {
-      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 25px;
     }
 
     .btn {
       display: inline-block;
-      background: #67e8f9;
-      color: #0b1220;
-      padding: 11px 21px;
-      border-radius: 8px;
+      padding: 11px 20px;
+      border: 1px solid #22d3ee;
+      border-radius: 6px;
+      color: #22d3ee;
       font-weight: bold;
-      margin: 7px 10px 7px 0;
       transition: 0.2s;
     }
 
+    .btn.primary {
+      background: #22d3ee;
+      color: #0b1120;
+    }
+
     .btn:hover {
-      background: #a5f3fc;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #67e8f9;
-      border: 1px solid #67e8f9;
-    }
-
-    .btn-outline:hover {
+      transform: translateY(-3px);
       background: #67e8f9;
-      color: #0b1220;
+      color: #0b1120;
     }
 
-    section {
-      padding: 65px 8%;
+    .section-dark {
+      background: #111827;
     }
 
-    section h2 {
-      color: #67e8f9;
-      font-size: 30px;
-      margin-bottom: 25px;
-    }
-
-    .section-intro {
-      color: #cbd5e1;
-      max-width: 850px;
-      margin-bottom: 25px;
-    }
-
-    .cards {
+    .skills-grid, .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
     }
 
-    .card {
-      background: #152238;
-      border: 1px solid #2b3d57;
-      border-radius: 14px;
-      padding: 25px;
-      transition: transform 0.2s, border-color 0.2s;
+    .skill, .card {
+      background: #172235;
+      border: 1px solid #2b3b50;
+      border-radius: 10px;
+      padding: 22px;
+      transition: 0.25s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #67e8f9;
-    }
-
-    .card h3 {
+    .skill {
+      text-align: center;
       color: #67e8f9;
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .skill:hover, .card:hover {
+      transform: translateY(-5px);
+      border-color: #22d3ee;
     }
 
     .card p {
-      color: #d1d9e6;
-      margin-bottom: 12px;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+      font-size: 14px;
     }
 
-    .card strong {
-      color: #f4f7fb;
+    .tools {
+      color: #67e8f9 !important;
+      font-size: 13px !important;
     }
 
     .project-link {
       display: inline-block;
-      color: #67e8f9;
+      margin-top: 8px;
+      color: #22d3ee;
       font-weight: bold;
-      margin-top: 5px;
+      font-size: 14px;
     }
 
     .project-link:hover {
       text-decoration: underline;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skills span {
-      background: #152238;
-      border: 1px solid #2b3d57;
-      border-radius: 25px;
-      padding: 9px 17px;
-      color: #e2e8f0;
-      font-size: 14px;
-    }
-
-    .education-card {
-      max-width: 800px;
-      margin-bottom: 20px;
-    }
-
-    .education-card .subtitle {
-      color: #67e8f9;
+    .coming-soon {
+      color: #fbbf24;
+      font-size: 13px;
       font-weight: bold;
     }
 
-    #contact {
-      background: #111c30;
+    .education-card {
+      max-width: 750px;
+      margin-bottom: 20px;
+      padding: 24px;
+      background: #172235;
+      border-left: 4px solid #22d3ee;
+      border-radius: 8px;
     }
 
-    #contact p {
+    .education-card p {
       color: #cbd5e1;
-      margin-bottom: 10px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
     }
 
     footer {
@@ -229,30 +222,25 @@
       padding: 25px;
       background: #080e19;
       color: #94a3b8;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     @media (max-width: 650px) {
+      header {
+        justify-content: center;
+      }
+
       nav {
         justify-content: center;
-      }
-
-      nav div {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      header {
-        padding: 75px 8%;
-        min-height: auto;
+        gap: 13px;
       }
 
       section {
-        padding: 48px 8%;
+        padding: 55px 6%;
       }
 
-      section h2 {
-        font-size: 26px;
+      .hero {
+        min-height: 450px;
       }
     }
   </style>
@@ -260,239 +248,252 @@
 
 <body>
 
+<header>
+  <a class="logo" href="#home">PAVANI BANDI</a>
   <nav>
-    <strong>PAVANI BANDI</strong>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
   </nav>
+</header>
 
-  <header>
-    <p class="tag">WELCOME TO MY PORTFOLIO</p>
+<section class="hero" id="home">
+  <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+  <h1>Hi, I'm Pavani Bandi 👋</h1>
+  <h2>Aspiring Data Analyst</h2>
+  <p>
+    I am passionate about transforming raw data into meaningful
+    business insights. I enjoy analysing datasets, discovering
+    patterns, solving problems, and presenting insights through
+    interactive dashboards and data visualizations.
+  </p>
+  <div class="buttons">
+    <a class="btn primary" href="#projects">Explore My Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </div>
+</section>
 
-    <h1>Hi, I'm Pavani Bandi 👋</h1>
+<section id="about">
+  <h2>About Me</h2>
+  <p class="section-text">
+    I am a Bachelor of Technology graduate aspiring to build a career
+    in Data Analytics. I have been developing practical skills through
+    hands-on projects and professional training. I enjoy working
+    with data, identifying trends, solving business problems, and
+    converting information into actionable insights.
+  </p>
+</section>
 
-    <h2>Aspiring Data Analyst</h2>
+<section class="section-dark" id="skills">
+  <h2>Technical Skills</h2>
+  <p class="section-text">
+    Technologies and tools I have worked with through learning
+    and hands-on projects.
+  </p>
 
-    <p>
-      I am passionate about transforming raw data into meaningful
-      business insights. I enjoy analysing datasets, discovering
-      patterns, solving problems, and presenting insights through
-      interactive dashboards and data visualizations.
-    </p>
+  <div class="skills-grid">
+    <div class="skill">Python</div>
+    <div class="skill">SQL</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Microsoft Excel</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">Exploratory Data Analysis</div>
+    <div class="skill">Web Scraping</div>
+    <div class="skill">Data Cleaning</div>
+    <div class="skill">Data Visualization</div>
+    <div class="skill">Power Query</div>
+    <div class="skill">DAX</div>
+    <div class="skill">Databricks</div>
+    <div class="skill">Unity Catalog</div>
+    <div class="skill">Databricks SQL</div>
+    <div class="skill">Lakeflow</div>
+  </div>
+</section>
 
-    <div class="buttons">
-      <a class="btn" href="#projects">Explore My Projects</a>
-      <a class="btn btn-outline" href="#contact">Contact Me</a>
-    </div>
-  </header>
+<section id="projects">
+  <h2>My Projects</h2>
+  <p class="section-text">
+    A selection of my hands-on projects focused on data analysis,
+    business intelligence, data engineering, and extracting
+    meaningful insights from data.
+  </p>
 
-  <section id="about">
-    <h2>About Me</h2>
+  <div class="projects-grid">
 
-    <p class="section-intro">
-      I am a Bachelor of Technology graduate aspiring to build a career
-      in Data Analytics. I have been developing practical skills through
-      hands-on projects and professional training. I enjoy working with
-      data, identifying trends, solving business problems, and converting
-      information into actionable insights.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Technical Skills</h2>
-
-    <p class="section-intro">
-      Technologies and tools I have worked with through learning
-      and hands-on projects.
-    </p>
-
-    <div class="skills">
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-      <span>Microsoft Excel</span>
-      <span>Pandas</span>
-      <span>Exploratory Data Analysis</span>
-      <span>Web Scraping</span>
-      <span>Data Cleaning</span>
-      <span>Data Visualization</span>
-      <span>Power Query</span>
-      <span>DAX</span>
-      <span>Databricks</span>
-      <span>Unity Catalog</span>
-      <span>Databricks SQL</span>
-      <span>Lakeflow</span>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <p class="section-intro">
-      A selection of my hands-on projects focused on data analysis,
-      business intelligence, data engineering, and extracting
-      meaningful insights from data.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Retail Sales Analytics</h3>
-
-        <p>
-          Built a retail sales analytics solution using Databricks SQL
-          to analyse sales performance, product categories, regional
-          trends, customer behaviour, and business metrics through
-          an interactive AI/BI dashboard.
-        </p>
-
-        <p>
-          <strong>Tools:</strong>
-          Databricks, SQL, Genie, AI/BI Dashboards
-        </p>
-
-        <a class="project-link"
-           href="https://www.linkedin.com/pulse/retail-sales-analytics-pavani-bandi-hwwkf"
-           target="_blank" rel="noopener noreferrer">
-          Read Project Article →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Hotel Booking Analytics</h3>
-
-        <p>
-          Developed a hotel booking analytics platform using a
-          Bronze-Silver-Gold architecture. Processed raw booking data,
-          handled duplicates and data quality issues, created clean
-          datasets, and built Gold summary tables for revenue,
-          hotel, room type, and booking channel analysis.
-        </p>
-
-        <p>
-          <strong>Tools:</strong>
-          Databricks, SQL, Unity Catalog, Lakeflow,
-          AI/BI Dashboards
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>E-Commerce Sales Analytics</h3>
-
-        <p>
-          Analysed e-commerce sales data to understand sales performance,
-          customer trends, product performance, and business insights
-          through an interactive Power BI dashboard.
-        </p>
-
-        <p>
-          <strong>Tools:</strong>
-          Power BI, Power Query, DAX
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>BikeWale Web Scraping & EDA</h3>
-
-        <p>
-          Collected and analysed 500 bike records through web scraping.
-          Performed exploratory data analysis to identify trends in
-          pricing, mileage, engine capacity, and bike performance.
-        </p>
-
-        <p>
-          <strong>Tools:</strong>
-          Python, Pandas, Web Scraping, EDA
-        </p>
-
-        <a class="project-link"
-           href="https://github.com/pavanibandi-130/BikeWale-Web-Scraping-Data-Analysis"
-           target="_blank" rel="noopener noreferrer">
-          View Project on GitHub →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>StayPoint Hospitality</h3>
-
-        <p>
-          Analysed hotel reservation data using SQL queries to explore
-          booking patterns and answer hospitality business questions.
-        </p>
-
-        <p>
-          <strong>Tools:</strong> SQL
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education & Professional Training</h2>
-
-    <div class="card education-card">
-      <h3>Bachelor of Technology (B.Tech)</h3>
-      <p class="subtitle">
-        Malla Reddy Institute of Engineering and Technology
-      </p>
-      <p>Undergraduate Engineering Education</p>
-    </div>
-
-    <div class="card education-card">
-      <h3>Data Analytics Training</h3>
-      <p class="subtitle">Innomatics Research Labs</p>
+    <div class="card">
+      <h3>Retail Sales Analytics</h3>
       <p>
-        Currently pursuing professional training in Data Analytics,
-        with hands-on learning and practical project experience.
+        Built a retail sales analytics solution using Databricks SQL
+        to analyse sales performance, product categories, regional
+        trends, customer behaviour, and business metrics through
+        an interactive AI/BI dashboard.
       </p>
+      <p class="tools"><strong>Tools:</strong> Databricks, SQL, Genie, AI/BI Dashboards</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/Retail-Sales-Analytics-Databricks"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+      <br>
+      <a class="project-link"
+         href="https://www.linkedin.com/pulse/retail-sales-analytics-pavani-bandi-hwwkf"
+         target="_blank" rel="noopener noreferrer">
+        Read Project Article →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Hotel Booking Analytics</h3>
       <p>
-        <strong>Learning areas:</strong>
-        Python, SQL, Power BI, Excel, Databricks and Data Analytics.
+        Developed a hotel booking analytics platform using a
+        Bronze-Silver-Gold architecture. Processed raw booking data,
+        handled duplicates and data quality issues, and created
+        Gold summary tables for business analysis.
       </p>
+      <p class="tools"><strong>Tools:</strong> Databricks, SQL, Unity Catalog, Lakeflow, AI/BI</p>
+      <span class="coming-soon">GitHub project link coming soon</span>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Let's Connect</h2>
+    <div class="card">
+      <h3>E-Commerce Sales Analytics</h3>
+      <p>
+        Analysed e-commerce sales data to understand sales performance,
+        customer trends, product performance, and business insights
+        through an interactive Power BI dashboard.
+      </p>
+      <p class="tools"><strong>Tools:</strong> Power BI, Power Query, DAX</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/E-Commerce-Sales-Analytics-PowerBI-Project"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
 
+    <div class="card">
+      <h3>BikeWale Web Scraping & EDA</h3>
+      <p>
+        Collected and analysed 500 bike records through web scraping.
+        Performed exploratory data analysis to identify trends in
+        pricing, mileage, engine capacity, and bike performance.
+      </p>
+      <p class="tools"><strong>Tools:</strong> Python, Pandas, Web Scraping, EDA</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/BikeWale-Web-Scraping-Data-Analysis"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>StayPoint Hospitality</h3>
+      <p>
+        Analysed hotel reservation data using SQL queries to explore
+        booking patterns and answer hospitality business questions.
+      </p>
+      <p class="tools"><strong>Tools:</strong> SQL, MySQL, Data Analytics</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/StayPoint-Hospitality-SQL-Project"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>NYC Airbnb EDA</h3>
+      <p>
+        Explored Airbnb listing data to analyse pricing, room types,
+        neighbourhoods, reviews, and patterns in the New York
+        accommodation market.
+      </p>
+      <p class="tools"><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/NYC-Airbnb-EDA-Python-Project"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Agricultural Crop Yield Analysis</h3>
+      <p>
+        Analysed crop production and yield data to explore fertilizer,
+        irrigation, climate factors, district-level performance,
+        and agricultural trends.
+      </p>
+      <p class="tools"><strong>Tools:</strong> Microsoft Excel, Data Analysis, PivotTables</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/Agricultural-Crop-Yield-Analysis"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Databricks Data Architecture</h3>
+      <p>
+        Explored the concepts and architecture of Data Warehouses,
+        Data Lakes, and Data Lakehouses as part of a Databricks
+        learning assignment.
+      </p>
+      <p class="tools"><strong>Tools:</strong> Databricks, Data Engineering, Data Architecture</p>
+      <a class="project-link"
+         href="https://github.com/pavanibandi-130/day-3-databricks-data-architecture"
+         target="_blank" rel="noopener noreferrer">
+        View Project on GitHub →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-dark" id="education">
+  <h2>Education & Professional Training</h2>
+
+  <div class="education-card">
+    <h3>Bachelor of Technology (B.Tech)</h3>
+    <p><strong>Malla Reddy Institute of Engineering and Technology</strong></p>
+    <p>Undergraduate Engineering Education</p>
+  </div>
+
+  <div class="education-card">
+    <h3>Data Analytics Training</h3>
+    <p><strong>Innomatics Research Labs</strong></p>
     <p>
-      I am interested in learning, collaborating, and exploring
-      opportunities in Data Analytics. Feel free to connect with me.
+      Currently pursuing professional training in Data Analytics,
+      with hands-on learning and practical project experience.
     </p>
-
-    <div class="buttons">
-      <a class="btn"
-         href="mailto:pavanibandi836@gmail.com">
-        Email Me
-      </a>
-
-      <a class="btn btn-outline"
-         href="https://github.com/pavanibandi-130"
-         target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>
-
-      <a class="btn btn-outline"
-         href="https://www.linkedin.com/in/pavani-bandi-81a81127b/"
-         target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-    </div>
-
-    <p style="margin-top: 18px;">
-      Email: pavanibandi836@gmail.com
+    <p>
+      <strong>Learning areas:</strong> Python, SQL, Power BI,
+      Excel, Databricks and Data Analytics.
     </p>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Pavani Bandi | Data Analytics Portfolio</p>
-  </footer>
+<section id="contact">
+  <h2>Let's Connect</h2>
+  <p class="section-text">
+    I am interested in learning, collaborating, and exploring
+    opportunities in Data Analytics. Feel free to connect with me.
+  </p>
+
+  <div class="contact-links">
+    <a class="btn primary" href="mailto:pavanibandi836@gmail.com">Email Me</a>
+    <a class="btn" href="https://github.com/pavanibandi-130"
+       target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/pavani-bandi-81a81127b/"
+       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+  <p style="margin-top: 20px; color: #94a3b8;">
+    Email: pavanibandi836@gmail.com
+  </p>
+</section>
+
+<footer>
+  © 2026 Pavani Bandi | Data Analytics Portfolio
+</footer>
 
 </body>
 </html>
